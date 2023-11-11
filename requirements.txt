@@ -1,0 +1,15 @@
+# Python dependencies
+openai==0.27.0
+whisperx
+pydub==0.25.1
+numpy==1.21.2
+Flask==2.0.1
+gTTS==2.2.3
+
+# JavaScript dependencies
+# These should be added in your package.json file
+# "dependencies": {
+#   "socket.io": "^4.1.3",
+#   "express": "^4.17.1",
+#   "nodemon": "^2.0.12"
+# }
