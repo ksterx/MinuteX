@@ -27,9 +27,14 @@ io.on('connection', (socket) => {
         // Here you would update the transcript on the page
     });
 
+    socket.on('advice', (advice) => {
+        // Display the advice to the user
+        document.getElementById('advice-text').innerText = advice;
+    });
+
     socket.on('askAdvice', async () => {
         console.log('Advice asked');
-        const response = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
+        const response = await fetch('/advice', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -50,6 +55,8 @@ io.on('connection', (socket) => {
         console.log('Client disconnected');
     });
 });
+
+
 
 app.get('/', (req, res) => {
     res.send('Hello World!');

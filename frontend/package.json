@@ -1,5 +1,5 @@
 {
-    "name": "ai-meeting-advisor",
+    "name": "minutex",
     "version": "1.0.0",
     "description": "An AI web application that sits in on meetings and gives accurate advice",
     "main": "main.js",
@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/yourusername/ai-meeting-advisor.git"
+        "url": "git+https://github.com/ksterx/MinuteX.git"
     },
     "keywords": [
         "AI",
@@ -22,9 +22,9 @@
     "author": "Your Name",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/yourusername/ai-meeting-advisor/issues"
+        "url": "https://github.com/ksterx/MinuteX/issues"
     },
-    "homepage": "https://github.com/yourusername/ai-meeting-advisor#readme",
+    "homepage": "https://github.com/ksterx/MinuteX#readme",
     "dependencies": {
         "express": "^4.17.1",
         "socket.io": "^4.1.3",

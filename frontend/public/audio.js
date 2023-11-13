@@ -21,7 +21,7 @@ document.getElementById('start-meeting').addEventListener('click', function () {
             mediaRecorder.ondataavailable = function (e) {
                 chunks.push(e.data);
                 if (mediaRecorder.state == 'inactive') {
-                    let blob = new Blob(chunks, { type: 'audio/webm' });
+                    let blob = new Blob(chunks, { type: 'audio/wav' });
                     sendAudioToServer(blob);
                     chunks = [];
                 }
@@ -37,7 +37,7 @@ function sendAudioToServer(blob) {
     let data = new FormData();
     data.append('audio', blob);
 
-    fetch('/transcribe', {
+    fetch('/start', {
         method: 'POST',
         body: data
     })
@@ -49,3 +49,7 @@ function sendAudioToServer(blob) {
             console.error('Error:', error);
         });
 }
+
+document.getElementById('ask-advice').addEventListener('click', function () {
+    socket.emit('askAdvice');
+});
